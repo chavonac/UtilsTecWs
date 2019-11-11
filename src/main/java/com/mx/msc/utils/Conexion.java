@@ -73,7 +73,9 @@ public class Conexion {
 
     public void cerrar() {
         try {
-            cn.close();
+            if (cn != null) {
+                cn.close();
+            }
             conexion = null;
         } catch (SQLException e) {
             System.out.println("Error:" + e.getMessage());

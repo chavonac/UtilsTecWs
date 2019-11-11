@@ -29,18 +29,23 @@ public class Reportes {
      * This is a sample web service operation
      *
      * @param nombreReporte
+     * @param extension
      * @param parametros
      * @return
      */
     @WebMethod(operationName = "generaReporte")
-    public String generaReporte(@WebParam(name = "nombreReporte", mode = WebParam.Mode.IN) String nombreReporte,
-            @WebParam(name = "parametros", mode = WebParam.Mode.IN) Map<String, Object> parametros) {
+    public String generaReporte(
+            @WebParam(name = "nombreReporte", mode = WebParam.Mode.IN) String nombreReporte,
+            @WebParam(name = "extension", mode = WebParam.Mode.IN) String extension,
+            @WebParam(name = "parametros", mode = WebParam.Mode.IN) Map<String, Object> parametros
+    ) {
+        String reporte = null;
         try {
-            generaReporte.generaReporte(nombreReporte, parametros);
+            reporte = generaReporte.generaReporte(nombreReporte, extension, parametros);
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error titulatec:" + e.getMessage());
         }
 
-        return "Reporte Generado";
+        return reporte;
     }
 }
