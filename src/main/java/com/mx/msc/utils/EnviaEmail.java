@@ -17,7 +17,7 @@ public class EnviaEmail {
 
     public boolean enviaEmail(String remitente, String destinatario, String asunto, String mensaje) {
         boolean enviado = false;
-        final String username = "svalle016@accitesz.com";
+        final String username = "prueba.itesz@gmail.com";
         final String password = "Sergio2019_ITESZ";
 
         Properties prop = new Properties();
