@@ -8,6 +8,7 @@ package com.mx.msc.utils;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRParameter;
@@ -16,7 +17,7 @@ import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
-import org.olap4j.impl.ArrayMap;
+import org.apache.commons.codec.binary.Base64;
 
 /**
  *
@@ -42,7 +43,7 @@ public class GeneraReporte {
     }
 
     private Map<String, Object> getParamtersJasper(JasperReport jasperReport, Map<String, Object> parametrosReporte) {
-        Map<String, Object> paramsTmp = new ArrayMap<>();
+        Map<String, Object> paramsTmp = new HashMap<>();
         JRParameter[] jRParameter;
         try {
             jRParameter = jasperReport.getParameters();
@@ -67,7 +68,7 @@ public class GeneraReporte {
                 bs = JasperExportManager.exportReportToPdf(jasperPrint);
             }
             if (bs != null) {
-                reporte = new sun.misc.BASE64Encoder().encode(bs);
+                reporte = new Base64().encodeAsString(bs);
             }
         } catch (Exception e) {
             System.out.println("Error titulatec:" + e.getMessage());

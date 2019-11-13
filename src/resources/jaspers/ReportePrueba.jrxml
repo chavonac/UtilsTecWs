@@ -3,9 +3,9 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<parameter name="P_param" class="java.lang.String"/>
+	<parameter name="P_idSolicitud" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[SELECT nombre, telefono FROM sie_db.usuarios]]>
+		<![CDATA[SELECT nombre, telefono FROM usuarios]]>
 	</queryString>
 	<field name="nombre" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
