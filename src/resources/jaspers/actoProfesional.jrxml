@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Actos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b741385c-15d2-4ad7-99ce-b7e10c3da0e9">
+	<property name="ireport.zoom" value="2.1961500000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="P_idActo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT u.nombre as alumno,
+	o.descripcion as opcion,
+	DATE_FORMAT(ac.fecha_presentacion, '%d %M %Y' ) as fecha,
+	sa.descripcion as sala,
+	TIME_FORMAT(ac.hora_inicio, "%H:%i") as hora_inicio, 
+	concat('Zamora, Mich: a ', DATE_FORMAT(CURDATE(), "%d") , ' de ', DATE_FORMAT(CURDATE(), "%M"), ' del ', DATE_FORMAT(CURDATE(), "%Y")) fechaActual
+FROM actos ac
+join solicitudes s
+on s.id_solicitud = ac.id_solicitud
+join salas sa
+on sa.id_sala = ac.id_sala
+join alumnos a
+on a.nocontrol = s.nocontrol
+join usuarios u
+on u.idusuario = a.idusuario
+join opciones o
+on o.id_opcion = s.id_opcion
+where ac.id_acto = $P{P_idActo}]]>
+	</queryString>
+	<field name="alumno" class="java.lang.String"/>
+	<field name="opcion" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sala" class="java.lang.String"/>
+	<field name="hora_inicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaActual" class="java.lang.String"/>
+	<pageHeader>
+		<band height="84">
+			<frame>
+				<reportElement x="41" y="15" width="484" height="64" uuid="03d42d5a-9bc2-4b1c-9931-8f728651acf7"/>
+				<box topPadding="1" leftPadding="1">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<staticText>
+					<reportElement x="133" y="8" width="209" height="24" uuid="93683650-3a58-42b3-a070-473ad2581ec7"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Reprogemación de examen o Acto 
+profesional]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="133" y="38" width="209" height="24" uuid="1613a16f-4f11-40e8-9597-076cb112b88c"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Direción Académica
+División de estudios profesionales]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="407" y="8" width="73" height="52" uuid="cb0f70c4-ab62-4220-b3bb-c1eab47eafcb"/>
+					<textElement>
+						<font size="6" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Nivel: Registro
+Código: DAEP-05-EPR00
+No.Revisón: B
+F. Revisión: 3-06-04
+Emisión: 1 de 1
+No. Hojas]]></text>
+				</staticText>
+				<image>
+					<reportElement x="4" y="3" width="61" height="57" uuid="2993e323-5771-40de-92f3-148359689d6e"/>
+					<imageExpression><![CDATA["/home/chavon/workspace-project/UtilsTecWs/src/resources/imagenes/logo.png"]]></imageExpression>
+				</image>
+			</frame>
+			<line>
+				<reportElement x="109" y="15" width="1" height="64" uuid="c297f432-c26e-431c-94ef-43a61d579089"/>
+			</line>
+			<line>
+				<reportElement x="443" y="15" width="1" height="64" uuid="2947da29-a307-4346-b1cb-3f8beee67b52"/>
+			</line>
+			<line>
+				<reportElement x="110" y="47" width="333" height="1" uuid="74467049-734b-48ba-b70f-b6bf76107453"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="502" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="72" width="195" height="20" uuid="3fe5cae5-7b2e-4e7b-8ae5-073736587e08"/>
+				<text><![CDATA[CCORDINADOR Y/O JEFE DE CARRERA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="134" width="484" height="44" uuid="265880f3-5a32-4b1b-a9c2-44ab5b75e270"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Por medio del la presente, aprovecho la oportunidad para enviarle un cordial saludo, al mismo tiempo le informo que la reprogramación del " + $F{opcion} + " del candidato " + $F{alumno} + " queda de la siguiente manera."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="210" width="39" height="13" uuid="8b197de4-7a4a-4a13-aa0a-0dfad666de03"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="227" width="39" height="13" uuid="25ac2058-a1f5-4ff6-9994-d5483dda30c5"/>
+				<text><![CDATA[Lugar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="244" width="39" height="13" uuid="aa68e857-d7a6-4a39-8088-91cd47317e55"/>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="288" width="514" height="20" uuid="ed7ec830-a106-48a3-8459-eaec243a277e"/>
+				<text><![CDATA[Sin más por el momento me despido de usted, quedando a sus órdenes para cualquier aclaración.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="337" width="100" height="20" uuid="4ba640a8-d9a9-40fc-8a88-64302885902f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ATENTAMENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="428" width="100" height="20" uuid="dac6ad20-4bae-485a-bece-076957f33a9f"/>
+				<text><![CDATA[C.c.p. Alumno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="448" width="100" height="20" uuid="ef46da1e-1cc9-431d-a6d2-31e8d7f868c4"/>
+				<text><![CDATA[C.c.p. Archivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="388" width="296" height="20" uuid="62f65f4c-b202-4084-b814-b059b203f2c2"/>
+				<box topPadding="0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[JEFE DE LA DIVISIÓN DE ESTUDIOS PROFESIONALES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="158" y="380" width="238" height="1" uuid="8a5f703b-dd99-49f7-948a-bb20aa901db4"/>
+			</line>
+			<textField>
+				<reportElement x="258" y="14" width="260" height="20" uuid="3653ebba-909e-4a06-b0f0-bebc93b15999"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{fechaActual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="210" width="94" height="13" uuid="0c2e22e7-99da-4416-9b22-2b7f95ff9b54"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="227" width="94" height="13" uuid="3da0eb31-ed19-4be3-960f-dfe5a6318b72"/>
+				<textFieldExpression><![CDATA[$F{sala}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="244" width="94" height="13" uuid="a9b70302-e108-429d-b85e-1a9871ee8c0b"/>
+				<textFieldExpression><![CDATA[$F{hora_inicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
