@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Actos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b741385c-15d2-4ad7-99ce-b7e10c3da0e9">
 	<property name="ireport.zoom" value="2.4157650000000035"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="428"/>
+	<property name="ireport.y" value="44"/>
 	<parameter name="P_idActo" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -65,7 +65,7 @@ where ac.id_acto = $P{P_idActo};]]>
 	<pageHeader>
 		<band height="84">
 			<frame>
-				<reportElement x="41" y="15" width="484" height="64" uuid="03d42d5a-9bc2-4b1c-9931-8f728651acf7"/>
+				<reportElement uuid="03d42d5a-9bc2-4b1c-9931-8f728651acf7" x="41" y="15" width="484" height="64"/>
 				<box topPadding="1" leftPadding="1">
 					<pen lineWidth="2.0"/>
 					<topPen lineWidth="2.0"/>
@@ -74,14 +74,14 @@ where ac.id_acto = $P{P_idActo};]]>
 					<rightPen lineWidth="2.0"/>
 				</box>
 				<staticText>
-					<reportElement x="133" y="8" width="222" height="24" uuid="93683650-3a58-42b3-a070-473ad2581ec7"/>
+					<reportElement uuid="93683650-3a58-42b3-a070-473ad2581ec7" x="133" y="8" width="222" height="24"/>
 					<textElement textAlignment="Center">
 						<font isBold="true"/>
 					</textElement>
 					<text><![CDATA[Integración y aprobación del jurado]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="133" y="38" width="209" height="24" uuid="1613a16f-4f11-40e8-9597-076cb112b88c"/>
+					<reportElement uuid="1613a16f-4f11-40e8-9597-076cb112b88c" x="133" y="38" width="209" height="24"/>
 					<textElement textAlignment="Center">
 						<font isBold="true"/>
 					</textElement>
@@ -89,7 +89,7 @@ where ac.id_acto = $P{P_idActo};]]>
 División de estudios profesionales]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="407" y="8" width="73" height="52" uuid="cb0f70c4-ab62-4220-b3bb-c1eab47eafcb"/>
+					<reportElement uuid="cb0f70c4-ab62-4220-b3bb-c1eab47eafcb" x="407" y="8" width="73" height="52"/>
 					<textElement>
 						<font size="6" isBold="false"/>
 					</textElement>
@@ -101,146 +101,160 @@ Emisión: 12-09-04
 No. Hojas: 1 de 1]]></text>
 				</staticText>
 				<image>
-					<reportElement x="4" y="3" width="61" height="57" uuid="2993e323-5771-40de-92f3-148359689d6e"/>
-					<imageExpression><![CDATA["/home/chavon/workspace-project/UtilsTecWs/src/resources/imagenes/logo.png"]]></imageExpression>
+					<reportElement uuid="2993e323-5771-40de-92f3-148359689d6e" x="4" y="3" width="61" height="57"/>
+					<imageExpression><![CDATA["D:\\SVA\\Mis documentos\\maestria\\SEMESTRE III\\Arquitectura Orientada a Servicios\\UtilsTecWs\\src\\resources\\imagenes\\logo.png"]]></imageExpression>
 				</image>
 			</frame>
 			<line>
-				<reportElement x="109" y="15" width="1" height="64" uuid="c297f432-c26e-431c-94ef-43a61d579089"/>
+				<reportElement uuid="c297f432-c26e-431c-94ef-43a61d579089" x="109" y="15" width="1" height="64"/>
 			</line>
 			<line>
-				<reportElement x="443" y="15" width="1" height="64" uuid="2947da29-a307-4346-b1cb-3f8beee67b52"/>
+				<reportElement uuid="2947da29-a307-4346-b1cb-3f8beee67b52" x="443" y="15" width="1" height="64"/>
 			</line>
 			<line>
-				<reportElement x="110" y="47" width="333" height="1" uuid="74467049-734b-48ba-b70f-b6bf76107453"/>
+				<reportElement uuid="74467049-734b-48ba-b70f-b6bf76107453" x="110" y="47" width="333" height="1"/>
 			</line>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="502" splitType="Stretch">
 			<staticText>
-				<reportElement x="41" y="72" width="135" height="13" uuid="3fe5cae5-7b2e-4e7b-8ae5-073736587e08"/>
+				<reportElement uuid="3fe5cae5-7b2e-4e7b-8ae5-073736587e08" x="41" y="72" width="135" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[NOMBRE DEL CANDIDATO:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="258" y="14" width="260" height="20" uuid="3653ebba-909e-4a06-b0f0-bebc93b15999"/>
+				<reportElement uuid="3653ebba-909e-4a06-b0f0-bebc93b15999" x="258" y="14" width="260" height="20"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA[$F{fechaActual}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="41" y="86" width="135" height="13" uuid="1ce190c8-a3fe-4389-9ec3-f3036c9f69d4"/>
+				<reportElement uuid="1ce190c8-a3fe-4389-9ec3-f3036c9f69d4" x="41" y="86" width="135" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[No. DE CONTROL:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="99" width="135" height="13" uuid="d7b87af8-d18a-4fd1-994b-e543e8711055"/>
+				<reportElement uuid="d7b87af8-d18a-4fd1-994b-e543e8711055" x="41" y="99" width="135" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[LICENCIATURA:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="112" width="135" height="13" uuid="4df65b8b-3216-4612-9c3d-a1b19d8ac9e9"/>
+				<reportElement uuid="4df65b8b-3216-4612-9c3d-a1b19d8ac9e9" x="41" y="112" width="135" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[OPCIÓN DE TITULACIÓN:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="41" y="147" width="477" height="30" uuid="dbce0ebf-60e4-49f3-8928-8b91df227b4e"/>
+				<reportElement uuid="dbce0ebf-60e4-49f3-8928-8b91df227b4e" x="41" y="147" width="477" height="30"/>
+				<textElement/>
 				<textFieldExpression><![CDATA["La academia de _____________________________, propone como jurado para integrar el acto de recepción Profesional a:"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="41" y="194" width="145" height="13" uuid="c85fd032-1244-4375-b613-833e5df6fed7"/>
+				<reportElement uuid="c85fd032-1244-4375-b613-833e5df6fed7" x="41" y="194" width="145" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[Nombre;(Presidente):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="207" width="145" height="13" uuid="6890342c-d6fd-4ff0-ba24-8ab93e819dbc"/>
+				<reportElement uuid="6890342c-d6fd-4ff0-ba24-8ab93e819dbc" x="41" y="207" width="145" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[Nombre;(Secretario):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="220" width="145" height="13" uuid="23909552-073a-4c47-96c3-cccc0023cd10"/>
+				<reportElement uuid="23909552-073a-4c47-96c3-cccc0023cd10" x="41" y="220" width="145" height="13"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[Nombre;(vocal propietario):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="382" y="282" width="139" height="20" uuid="c838f393-941c-44d5-81e1-fe3f87d57ca1"/>
+				<reportElement uuid="c838f393-941c-44d5-81e1-fe3f87d57ca1" x="382" y="282" width="139" height="20"/>
+				<textElement/>
 				<text><![CDATA[PRESIDENTE DE ACADEMIA]]></text>
 			</staticText>
 			<line>
-				<reportElement x="373" y="281" width="148" height="1" uuid="e535d171-ef2e-42be-8392-dfa4e4470f75"/>
+				<reportElement uuid="e535d171-ef2e-42be-8392-dfa4e4470f75" x="373" y="281" width="148" height="1"/>
 			</line>
 			<staticText>
-				<reportElement x="323" y="349" width="120" height="20" uuid="ad3bb58f-3790-43e0-a7b4-5a35ee1ee811"/>
+				<reportElement uuid="ad3bb58f-3790-43e0-a7b4-5a35ee1ee811" x="323" y="349" width="120" height="20"/>
+				<textElement/>
 				<text><![CDATA[Aprobación del jurado]]></text>
 			</staticText>
 			<line>
-				<reportElement x="306" y="407" width="234" height="1" uuid="da20b13a-bbb8-41e7-85a5-41b8134f224d"/>
+				<reportElement uuid="da20b13a-bbb8-41e7-85a5-41b8134f224d" x="306" y="407" width="234" height="1"/>
 			</line>
 			<line>
-				<reportElement x="306" y="420" width="234" height="1" uuid="359068b5-733f-4f07-869f-a20d02353ce9"/>
+				<reportElement uuid="359068b5-733f-4f07-869f-a20d02353ce9" x="306" y="420" width="234" height="1"/>
 			</line>
 			<line>
-				<reportElement x="306" y="434" width="234" height="1" uuid="3875a9b6-cfed-4f63-a503-6d62a9166244"/>
+				<reportElement uuid="3875a9b6-cfed-4f63-a503-6d62a9166244" x="306" y="434" width="234" height="1"/>
 			</line>
 			<line>
-				<reportElement x="306" y="448" width="234" height="1" uuid="6ff32e2d-d88f-437e-9012-95bf047858ae"/>
+				<reportElement uuid="6ff32e2d-d88f-437e-9012-95bf047858ae" x="306" y="448" width="234" height="1"/>
 			</line>
 			<rectangle>
-				<reportElement x="230" y="369" width="18" height="20" uuid="200d3eee-08b2-43e4-89eb-c9e31d145613"/>
+				<reportElement uuid="200d3eee-08b2-43e4-89eb-c9e31d145613" x="230" y="369" width="18" height="20"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="230" y="389" width="18" height="20" uuid="588106ee-a4e6-4c69-bb9a-328f794184a4"/>
+				<reportElement uuid="588106ee-a4e6-4c69-bb9a-328f794184a4" x="230" y="389" width="18" height="20"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="251" y="369" width="18" height="15" uuid="0fc96462-819e-4fbf-a170-39228e996a33"/>
+				<reportElement uuid="0fc96462-819e-4fbf-a170-39228e996a33" x="251" y="369" width="18" height="15"/>
+				<textElement/>
 				<text><![CDATA[Si]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="251" y="392" width="18" height="15" uuid="2d1d4a21-6685-4fd6-97c2-4e21c1a20bd0"/>
+				<reportElement uuid="2d1d4a21-6685-4fd6-97c2-4e21c1a20bd0" x="251" y="392" width="18" height="15"/>
+				<textElement/>
 				<text><![CDATA[No]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="21" y="389" width="38" height="18" uuid="7e6854d0-b717-4691-b9c2-4a84851cb20b"/>
+				<reportElement uuid="7e6854d0-b717-4691-b9c2-4a84851cb20b" x="21" y="389" width="38" height="18"/>
+				<textElement/>
 				<text><![CDATA[Vobo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="45" y="420" width="163" height="28" uuid="1736b78e-ebc1-4e6b-a686-80de41953752"/>
+				<reportElement uuid="1736b78e-ebc1-4e6b-a686-80de41953752" x="45" y="420" width="163" height="28"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Firma
 Jefe de carrera o coordinador]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="45" y="464" width="278" height="38" uuid="06b6f342-86e2-4489-9722-029b0a1debfd"/>
+				<reportElement uuid="06b6f342-86e2-4489-9722-029b0a1debfd" x="45" y="464" width="278" height="38"/>
+				<textElement/>
 				<text><![CDATA[C.c.p. División de estudios profesionales
 C.c.p. Miembros del jurado
 C.c.p. Archivo]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="180" y="72" width="313" height="13" uuid="3f9b4f83-cf05-46d2-853f-29f0a6b5fed1"/>
+				<reportElement uuid="3f9b4f83-cf05-46d2-853f-29f0a6b5fed1" x="180" y="72" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="86" width="313" height="13" uuid="8d03e131-bcb1-4314-946d-dc2df8a56175"/>
+				<reportElement uuid="8d03e131-bcb1-4314-946d-dc2df8a56175" x="180" y="86" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{nocontrol}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="99" width="313" height="13" uuid="59bd1429-b340-41c4-ad9b-005cd7398869"/>
+				<reportElement uuid="59bd1429-b340-41c4-ad9b-005cd7398869" x="180" y="99" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{licenciatura}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="112" width="313" height="13" uuid="06c586be-0eb5-4dca-8910-96bd7251ad6a"/>
+				<reportElement uuid="06c586be-0eb5-4dca-8910-96bd7251ad6a" x="180" y="112" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{opcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="186" y="194" width="313" height="13" uuid="47855012-ddbf-4504-8ddf-dd17f532b595"/>
+				<reportElement uuid="47855012-ddbf-4504-8ddf-dd17f532b595" x="186" y="194" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{presidente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="186" y="207" width="313" height="13" uuid="bf035748-c017-410c-b985-062f3ed6ce64"/>
+				<reportElement uuid="bf035748-c017-410c-b985-062f3ed6ce64" x="186" y="207" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{secretario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="186" y="220" width="313" height="13" uuid="79489b1e-dad1-44ba-a0a5-1d79fee0d65a"/>
+				<reportElement uuid="79489b1e-dad1-44ba-a0a5-1d79fee0d65a" x="186" y="220" width="313" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{vocal}]]></textFieldExpression>
 			</textField>
 		</band>

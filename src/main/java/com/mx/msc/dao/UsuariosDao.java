@@ -26,7 +26,7 @@ public class UsuariosDao {
                     + "from titulatec.usuarios\n"
                     + "where email = ?\n"
                     + "and clave = ? ");
-            ps = Conexion.getInstance().getCn().prepareStatement(query.toString());
+            ps = Conexion.getInstance("java:app/jdbc/SIE_DB").getCn().prepareStatement(query.toString());
             ps.setString(1, correo);
             ps.setString(2, password);
             rs = ps.executeQuery();

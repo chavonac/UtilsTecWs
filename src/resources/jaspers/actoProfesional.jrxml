@@ -39,7 +39,7 @@ where ac.id_acto = $P{P_idActo}]]>
 	<pageHeader>
 		<band height="84">
 			<frame>
-				<reportElement x="41" y="15" width="484" height="64" uuid="03d42d5a-9bc2-4b1c-9931-8f728651acf7"/>
+				<reportElement uuid="03d42d5a-9bc2-4b1c-9931-8f728651acf7" x="41" y="15" width="484" height="64"/>
 				<box topPadding="1" leftPadding="1">
 					<pen lineWidth="2.0"/>
 					<topPen lineWidth="2.0"/>
@@ -48,7 +48,7 @@ where ac.id_acto = $P{P_idActo}]]>
 					<rightPen lineWidth="2.0"/>
 				</box>
 				<staticText>
-					<reportElement x="133" y="8" width="209" height="24" uuid="93683650-3a58-42b3-a070-473ad2581ec7"/>
+					<reportElement uuid="93683650-3a58-42b3-a070-473ad2581ec7" x="133" y="8" width="209" height="24"/>
 					<textElement textAlignment="Center">
 						<font isBold="true"/>
 					</textElement>
@@ -56,7 +56,7 @@ where ac.id_acto = $P{P_idActo}]]>
 profesional]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="133" y="38" width="209" height="24" uuid="1613a16f-4f11-40e8-9597-076cb112b88c"/>
+					<reportElement uuid="1613a16f-4f11-40e8-9597-076cb112b88c" x="133" y="38" width="209" height="24"/>
 					<textElement textAlignment="Center">
 						<font isBold="true"/>
 					</textElement>
@@ -64,7 +64,7 @@ profesional]]></text>
 División de estudios profesionales]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="407" y="8" width="73" height="52" uuid="cb0f70c4-ab62-4220-b3bb-c1eab47eafcb"/>
+					<reportElement uuid="cb0f70c4-ab62-4220-b3bb-c1eab47eafcb" x="407" y="8" width="73" height="52"/>
 					<textElement>
 						<font size="6" isBold="false"/>
 					</textElement>
@@ -76,85 +76,95 @@ Emisión: 1 de 1
 No. Hojas]]></text>
 				</staticText>
 				<image>
-					<reportElement x="4" y="3" width="61" height="57" uuid="2993e323-5771-40de-92f3-148359689d6e"/>
-					<imageExpression><![CDATA["/home/chavon/workspace-project/UtilsTecWs/src/resources/imagenes/logo.png"]]></imageExpression>
+					<reportElement uuid="2993e323-5771-40de-92f3-148359689d6e" x="4" y="3" width="61" height="57"/>
+					<imageExpression><![CDATA["D:\\SVA\\Mis documentos\\maestria\\SEMESTRE III\\Arquitectura Orientada a Servicios\\UtilsTecWs\\src\\resources\\imagenes\\logo.png"]]></imageExpression>
 				</image>
 			</frame>
 			<line>
-				<reportElement x="109" y="15" width="1" height="64" uuid="c297f432-c26e-431c-94ef-43a61d579089"/>
+				<reportElement uuid="c297f432-c26e-431c-94ef-43a61d579089" x="109" y="15" width="1" height="64"/>
 			</line>
 			<line>
-				<reportElement x="443" y="15" width="1" height="64" uuid="2947da29-a307-4346-b1cb-3f8beee67b52"/>
+				<reportElement uuid="2947da29-a307-4346-b1cb-3f8beee67b52" x="443" y="15" width="1" height="64"/>
 			</line>
 			<line>
-				<reportElement x="110" y="47" width="333" height="1" uuid="74467049-734b-48ba-b70f-b6bf76107453"/>
+				<reportElement uuid="74467049-734b-48ba-b70f-b6bf76107453" x="110" y="47" width="333" height="1"/>
 			</line>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="502" splitType="Stretch">
 			<staticText>
-				<reportElement x="41" y="72" width="195" height="20" uuid="3fe5cae5-7b2e-4e7b-8ae5-073736587e08"/>
+				<reportElement uuid="3fe5cae5-7b2e-4e7b-8ae5-073736587e08" x="41" y="72" width="195" height="20"/>
+				<textElement/>
 				<text><![CDATA[CCORDINADOR Y/O JEFE DE CARRERA]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="41" y="134" width="484" height="44" uuid="265880f3-5a32-4b1b-a9c2-44ab5b75e270"/>
+				<reportElement uuid="265880f3-5a32-4b1b-a9c2-44ab5b75e270" x="41" y="134" width="484" height="44"/>
 				<textElement textAlignment="Justified"/>
 				<textFieldExpression><![CDATA["Por medio del la presente, aprovecho la oportunidad para enviarle un cordial saludo, al mismo tiempo le informo que la reprogramación del " + $F{opcion} + " del candidato " + $F{alumno} + " queda de la siguiente manera."]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="41" y="210" width="39" height="13" uuid="8b197de4-7a4a-4a13-aa0a-0dfad666de03"/>
+				<reportElement uuid="8b197de4-7a4a-4a13-aa0a-0dfad666de03" x="41" y="210" width="39" height="13"/>
+				<textElement/>
 				<text><![CDATA[Fecha:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="227" width="39" height="13" uuid="25ac2058-a1f5-4ff6-9994-d5483dda30c5"/>
+				<reportElement uuid="25ac2058-a1f5-4ff6-9994-d5483dda30c5" x="41" y="227" width="39" height="13"/>
+				<textElement/>
 				<text><![CDATA[Lugar:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="244" width="39" height="13" uuid="aa68e857-d7a6-4a39-8088-91cd47317e55"/>
+				<reportElement uuid="aa68e857-d7a6-4a39-8088-91cd47317e55" x="41" y="244" width="39" height="13"/>
+				<textElement/>
 				<text><![CDATA[Hora:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="288" width="514" height="20" uuid="ed7ec830-a106-48a3-8459-eaec243a277e"/>
+				<reportElement uuid="ed7ec830-a106-48a3-8459-eaec243a277e" x="41" y="288" width="514" height="20"/>
+				<textElement/>
 				<text><![CDATA[Sin más por el momento me despido de usted, quedando a sus órdenes para cualquier aclaración.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="222" y="337" width="100" height="20" uuid="4ba640a8-d9a9-40fc-8a88-64302885902f"/>
+				<reportElement uuid="4ba640a8-d9a9-40fc-8a88-64302885902f" x="222" y="337" width="100" height="20"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[ATENTAMENTE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="428" width="100" height="20" uuid="dac6ad20-4bae-485a-bece-076957f33a9f"/>
+				<reportElement uuid="dac6ad20-4bae-485a-bece-076957f33a9f" x="41" y="428" width="100" height="20"/>
+				<textElement/>
 				<text><![CDATA[C.c.p. Alumno]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="41" y="448" width="100" height="20" uuid="ef46da1e-1cc9-431d-a6d2-31e8d7f868c4"/>
+				<reportElement uuid="ef46da1e-1cc9-431d-a6d2-31e8d7f868c4" x="41" y="448" width="100" height="20"/>
+				<textElement/>
 				<text><![CDATA[C.c.p. Archivo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="122" y="388" width="296" height="20" uuid="62f65f4c-b202-4084-b814-b059b203f2c2"/>
+				<reportElement uuid="62f65f4c-b202-4084-b814-b059b203f2c2" x="122" y="388" width="296" height="20"/>
 				<box topPadding="0"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[JEFE DE LA DIVISIÓN DE ESTUDIOS PROFESIONALES]]></text>
 			</staticText>
 			<line>
-				<reportElement x="158" y="380" width="238" height="1" uuid="8a5f703b-dd99-49f7-948a-bb20aa901db4"/>
+				<reportElement uuid="8a5f703b-dd99-49f7-948a-bb20aa901db4" x="158" y="380" width="238" height="1"/>
 			</line>
 			<textField>
-				<reportElement x="258" y="14" width="260" height="20" uuid="3653ebba-909e-4a06-b0f0-bebc93b15999"/>
+				<reportElement uuid="3653ebba-909e-4a06-b0f0-bebc93b15999" x="258" y="14" width="260" height="20"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA[$F{fechaActual}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="210" width="94" height="13" uuid="0c2e22e7-99da-4416-9b22-2b7f95ff9b54"/>
+				<reportElement uuid="0c2e22e7-99da-4416-9b22-2b7f95ff9b54" x="80" y="210" width="94" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="227" width="94" height="13" uuid="3da0eb31-ed19-4be3-960f-dfe5a6318b72"/>
+				<reportElement uuid="3da0eb31-ed19-4be3-960f-dfe5a6318b72" x="80" y="227" width="94" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{sala}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="244" width="94" height="13" uuid="a9b70302-e108-429d-b85e-1a9871ee8c0b"/>
+				<reportElement uuid="a9b70302-e108-429d-b85e-1a9871ee8c0b" x="80" y="244" width="94" height="13"/>
+				<textElement/>
 				<textFieldExpression><![CDATA[$F{hora_inicio}]]></textFieldExpression>
 			</textField>
 		</band>

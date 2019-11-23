@@ -23,19 +23,19 @@ public class Conexion {
     static Conexion conexion;
     Connection cn;
 
-    public Conexion() {
+    public Conexion(String esquema) {
         try {
             Context context = new InitialContext();
-            DataSource ds = (DataSource) context.lookup("java:app/jdbc/SIE_DB");
+            DataSource ds = (DataSource) context.lookup(esquema);
             cn = ds.getConnection();
         } catch (SQLException | NamingException e) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, e.getMessage());
         }
     }
 
-    public static Conexion getInstance() {
+    public static Conexion getInstance(String esquema) {
         if (conexion == null) {
-            conexion = new Conexion();
+            conexion = new Conexion(esquema);
         }
         return conexion;
     }

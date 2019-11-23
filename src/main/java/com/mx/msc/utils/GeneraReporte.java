@@ -30,14 +30,14 @@ public class GeneraReporte {
         JasperPrint jasperPrint;
         String reporte = null;
         try {
-            Connection conn = Conexion.getInstance().getCn();
-            jasperReport = JasperCompileManager.compileReport(this.getClass().getResourceAsStream(File.separator.concat(nombreReporte).concat(".jrxml")));
+            Connection conn = Conexion.getInstance("java:app/titulatec").getCn();
+            jasperReport = JasperCompileManager.compileReport(this.getClass().getResourceAsStream("/".concat(nombreReporte).concat(".jrxml")));
             jasperPrint = JasperFillManager.fillReport(jasperReport, getParamtersJasper(jasperReport, parametrosReporte), conn);
             reporte = creaReporte(jasperPrint, extension);
         } catch (JRException e) {
             System.out.println("Error titulatec:" + e.getMessage());
         } finally {
-            Conexion.getInstance().cerrar();
+            Conexion.getInstance("java:app/titulatec").cerrar();
         }
         return reporte;
     }

@@ -31,7 +31,7 @@ public class SalasDisponiblesDao {
             query.append("and hora_inicio between str_to_date(?, '%H:%i:%s') and   str_to_date(?,'%H:%i:%s') ");
             query.append("or hora_fin between str_to_date(?, '%H:%i:%s') and   str_to_date(?,'%H:%i:%s'))");
 
-            ps = Conexion.getInstance().getCn().prepareStatement(query.toString());
+            ps = Conexion.getInstance("java:app/titulatec").getCn().prepareStatement(query.toString());
             ps.setString(1, fechaPresentacion);
             ps.setString(2, horaInicio);
             ps.setString(3, horaFin);
